@@ -15,6 +15,6 @@ export const text = (points, string, {
         context.fillText(row, points[0][0], points[0][1] + 2 + i * STRING_HEIGHT)
     })
 
-    context.restore()
-    context.save()
+    // context.restore()
+    // context.save()
 }

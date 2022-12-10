@@ -18,6 +18,6 @@ export const circle = (center, radius, {
         context.stroke()
     }
 
-    context.restore()
-    context.save()
+    // context.restore()
+    // context.save()
 }

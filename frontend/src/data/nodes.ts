@@ -1,6 +1,6 @@
 export const nodes = {
     usersRoot: document.getElementById('users'),
-    canvasRoot: document.getElementById('canvas'),
+    canvasRoot: document.getElementById('canvas') as HTMLCanvasElement,
     roomLinkBtn: document.getElementById('roomLink'),
     customColorSelector: document.getElementById('customColor'),
     customColorIndicator: document.getElementById('customColorIndicator'),
@@ -22,4 +22,4 @@ export const nodes = {
     nameCancel: document.getElementById('nameCancel'),
 }
 
-export const getNode = (node) => nodes[node]
+// export const getNode = (node: string) => nodes[node]

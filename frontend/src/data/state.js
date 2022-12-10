@@ -69,10 +69,33 @@ export const state = {
     // Selected control color
     selectedColor: '#171717',
     // Scale value
-    currentScale: 1 / 2,
+    currentScale: 1,
 }
 
 export const getState = (key) => state[key]
 export const setState = (key, value) => {
     state[key] = value
 }
+
+const initialState = state
+
+export const store = ((initialState) => {
+    const state = initialState
+    const subscribes = {}
+    return {
+        set: (key, value) => {
+            state[key] = value
+
+            if (subscribes[key]) {
+                subscribes[key].forEach((cb) => cb(state[key], state))
+            }
+
+            return void 0
+        },
+        // TODO: Make immutable data!!!
+        get: (key) => state[key],
+        subscribe: (eventName, cb) => {
+            subscribes[eventName] = (subscribes[eventName] || []).concat(cb)
+        },
+    }
+})(initialState)

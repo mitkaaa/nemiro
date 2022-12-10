@@ -63,6 +63,6 @@ export const rect = (unsortedPoints, {
         context.fill()
     }
 
-    context.restore()
-    context.save()
+    // context.restore()
+    // context.save()
 }

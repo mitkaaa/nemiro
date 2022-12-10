@@ -34,8 +34,8 @@ const drawElement = (element) => {
 }
 
 const clearCanvas = () => {
-    state.canvasContext.restore()
-    state.canvasContext.save()
+    // state.canvasContext.restore()
+    // state.canvasContext.save()
 
     state.canvasContext.clearRect(
         0,

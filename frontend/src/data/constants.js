@@ -14,6 +14,8 @@ export const ELEMENT_TYPES = {
 }
 
 export const CONTROL_TYPES = {
+    cursor: 'cursor',
+    move: 'move',
     pointer: 'pointer',
     rect: 'rect',
     line: 'line',
@@ -39,4 +41,8 @@ export const DATA_ACTIONS = {
     steady: 'steady',
     like: 'like',
     dislike: 'dislike',
+}
+
+export const STATE = {
+    SAVED_ELEMENTS: 'SAVED_ELEMENTS',
 }

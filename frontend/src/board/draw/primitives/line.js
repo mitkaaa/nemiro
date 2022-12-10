@@ -13,6 +13,6 @@ export const line = (points, {
     })
     context.stroke()
 
-    context.restore()
-    context.save()
+    // context.restore()
+    // context.save()
 }

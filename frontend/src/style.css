@@ -5,7 +5,7 @@
 
 html {
     font-size: 16px;
-}
+} 
 
 body {
     margin: 0;
@@ -44,16 +44,16 @@ body {
 .canvasParent {
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
-.canvas {
+/* .canvas {
     transform-origin: 0% 0%;
     touch-action: none;
     background-color: var(--canvas-color);
     background-image: repeating-linear-gradient(to bottom, rgba(0,0,0,0), rgba(100, 100, 100, 0) calc(5% - 1px),rgba(100, 100, 100, 0.3) calc(5% - 1px), rgba(100, 100, 100, 0.3) 5%),
         repeating-linear-gradient(to right, rgba(0,0,0,0), rgba(100, 100, 100, 0) calc(2.5% - 1px),rgba(100, 100, 100, 0.3) calc(2.5% - 1px), rgba(100, 100, 100, 0.3) 2.5%);
-}
+} */
 .pointer {
     cursor: pointer;
 }

@@ -1,8 +1,8 @@
-import { state } from './state'
+import { state, store } from './state'
 import { redrawScreen } from '../board/draw'
 import { startTimer, stopTimer } from '../interface/timer'
 import { games } from '../interface/games'
-import { DATA_ACTIONS } from './constants'
+import { DATA_ACTIONS, STATE } from './constants'
 import { renderUsers } from '../interface/users'
 
 const { protocol, host } = window.location
@@ -30,12 +30,13 @@ export const openSocket = () => {
 
         if (data.users) {
             renderUsers(Object.values(data.users))
-            redrawScreen()
+            // redrawScreen()
         }
 
         if (data.elements) {
-            state.savedElements = data.elements
-            redrawScreen()
+            store.set(STATE.SAVED_ELEMENTS, data.elements)
+            // state.savedElements = data.elements
+            // redrawScreen()
         }
 
         if (data.timer && data.timer.action === DATA_ACTIONS.start) {

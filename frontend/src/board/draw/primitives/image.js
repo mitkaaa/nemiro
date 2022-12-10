@@ -22,6 +22,6 @@ export const image = withOnload((points, url, { context }) => {
         points[1][1] - points[0][1],
     )
 
-    context.restore()
-    context.save()
+    // context.restore()
+    // context.save()
 })
